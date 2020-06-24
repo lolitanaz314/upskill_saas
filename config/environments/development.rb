@@ -4,7 +4,15 @@ Rails.application.configure do
   # In the development environment your application's code is reloaded on
   # every request. This slows down response time but is perfect for development
   # since you don't have to restart the web server when you make code changes.
+  
+  
+  class Application < Rails::Application
+    config.web_console.whitelisted_ips = '10.0.2.2'
+  end
+
   config.cache_classes = false
+  
+  config.hosts = nil
 
   # Do not eager load code on boot.
   config.eager_load = false
